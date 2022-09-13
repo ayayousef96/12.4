@@ -1,0 +1,30 @@
+.cut-border {
+    position: relative;
+    display: inline-block;
+    border: 5px solid red;
+    width: 150px;
+    height: 150px;
+  }
+  .cut-border::before {
+    content: "";
+    position: absolute;
+    height: calc(100% + 10px);
+    width: 50%;
+    background-color: black;
+    top: -5px;
+    left: 25%;
+  }
+  .cut-border::after {
+    content: "";
+    position: absolute;
+    height: 50%;
+    width: calc(100% + 10px);
+    background-color: black;
+    top: 25%;
+    left: -5px;
+  }
+  *{
+    background-color: black;
+    align-items: center;
+  }
+  
